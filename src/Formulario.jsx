@@ -6,7 +6,7 @@ class Formulario extends Component{
         super(props);
 
         this.state = {
-            nombre: "nombre usuario",
+            nombre: "Su nombre",
             apellido: ""
         }
 
@@ -34,16 +34,20 @@ class Formulario extends Component{
             <div id="elemento">
                 <h1>Formulario</h1>
                 <form action="">
-                    <label htmlFor="">Nombre</label><br/>
-                    <input type="text" name="nombre" onChange={ this.cambiarNombre } /><br/>
-                    <label htmlFor="">Apellido</label><br/>
-                    <input type="text" name="apellido" onChange={ this.cambiarApellido }  /><br/>
-                    <input type="submit" value="enviar"/><br/>
+                    <div className="input-group">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="">Nombres y apellidos</span>
+                        </div>
+                        <input type="text" className="form-control" placeholder="Ingrese su nombre" onChange={ this.cambiarNombre }/>
+                        <input type="text" className="form-control" placeholder="Ingrese sus apellidos" onChange={ this.cambiarApellido }/>
+                        </div>
+                        <br />
+                        <input type="submit" className="btn btn-primary" value="Ingresar"/>
                 </form>
                 <br/>
                 <br/>
-                <h3>{`Nombre: ${this.state.nombre}`}</h3>
-                <h3>{`Apellido: ${this.state.apellido}`}</h3>
+                <h4>{`Nombre: ${this.state.nombre}`}</h4>
+                <h4>{`Apellido: ${this.state.apellido}`}</h4>
             </div>
         )
     }

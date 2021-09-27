@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Contenedor from './Contenedor';
 import Contacto from './Contacto';
 import Header from './Header';
-import EstudianteDetalle from './EstudianteDetalle';
+import personajeDetalle from './personajeDetalle';
 import MainMenu from './MainMenu';
 import DatosApi from './DatosApi';
 
@@ -12,8 +12,8 @@ const App = () => (
     <MainMenu />
     <Switch>
       <Route path="/" exact component={ Header } />
-      <Route path="/estudiantes" exact component={ Contenedor } />
-      <Route path="/estudiantes/:id" exact component={ EstudianteDetalle } />
+      <Route path="/personajes" exact component={ Contenedor } />
+      <Route path="/personajes/:id" exact component={ personajeDetalle } />
       <Route path="/contacto" exact  component={ Contacto } />
       <Route path="/datos_api" exact  component={ DatosApi } />
       <Route component={() => (

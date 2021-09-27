@@ -14,7 +14,7 @@ class DatosApi extends Component{
     }
 
     componentDidMount(){
-        axios.get('https://my-json-server.typicode.com/javierortegon/datajson/characters')
+        axios.get('https://my-json-server.typicode.com/typicode/demo/posts')
         .then(resp => {
             this.setState({
                 posts: resp.data
